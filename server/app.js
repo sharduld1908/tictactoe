@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 import * as http from "http";
 import { Server as SocketIOServer } from 'socket.io';
 import express from 'express';
@@ -203,5 +206,5 @@ io.on('connection', socket => {
 
 server.listen(PORT, () => {
     console.log();
-    console.log("Server listening: http://localhost:9000/");
+    console.log(`Server listening at port: ${PORT}/`);
 });
